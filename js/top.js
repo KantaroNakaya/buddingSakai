@@ -29,7 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
         mvElement.style.display = 'none';
     }, 5000);
 });
-
-
-
-

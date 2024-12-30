@@ -29,3 +29,7 @@ $(document).ready(function() {
         }
     });
 });
+$('.site-title').on('click', function() {
+    $('.mv').css('display', 'block')
+    location.reload();
+});
