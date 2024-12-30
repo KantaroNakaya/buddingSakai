@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+$breakpoints:(
+    'sp-max': '768px',
+    'pc-min': '769px',
+)!default;
+
+@mixin mq($breakpoint:sp-max) {
+    @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+@mixin mq-min($breakpoint:pc-min) {
+    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+@mixin screen($break-point-min, $break-point-max) {
+    @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+        @content;
+    }
+}
+
+
+$bg01: #FFD1C2;
+$bg02: #FAFFBA;
+$bg03: #BFFFBF;
+$bg04: #C8F1FF;
+$bg05: #E8DCFF;
+$bg06: #FFCCF3;

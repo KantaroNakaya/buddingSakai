@@ -1,0 +1,90 @@
+.mv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./../img/bg_mv.jpg);
+  background-size: cover;
+  padding: 30px 10px;
+  position: relative;
+}
+.mv_logo {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.project-name {
+  color: #000000;
+  font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 18px;
+}
+
+html, body, main, .center-side, .split-container, .sv {
+  position: relative;
+  height: 100%;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 90px 5%;
+}
+.section_container {
+  background-color: rgba(255, 255, 255, 0.7960784314);
+  padding: 15% 5%;
+  border-radius: 8px;
+}
+.section_title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#section01 {
+  background-color: #FFD1C2;
+}
+
+#section02 {
+  background-color: #FAFFBA;
+}
+
+#section03 {
+  background-color: #BFFFBF;
+}
+
+#section04 {
+  background-color: #C8F1FF;
+}
+
+#section05 {
+  background-color: #E8DCFF;
+}
+
+#section06 {
+  background-color: #FFCCF3;
+}
+
+.about_text {
+  font-size: 14px;
+}

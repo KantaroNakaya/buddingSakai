@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@import "bp";
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+}
+a{
+	display: inline-block;
+	&:link,&:visited,&:active{
+		color: inherit;
+		text-decoration: none;
+	}
+	&:hover {
+		@include mq-min{
+			color: inherit;
+			opacity: .7;
+			text-decoration: none!important;
+		}
+	}
+}
+
+.pc {
+	display: none;
+    @include mq-min(){
+		display: block;
+    }
+}
+.sp {
+	display: block;
+    @include mq-min(){
+		display: none;
+    }
+}
+.pc-inline {
+	display: none;
+    @include mq-min(){
+		display: inline;
+    }
+}
+.sp-inline {
+	display: inline;
+    @include mq-min(){
+		display: none;
+    }
+}
+.minus-space{
+    margin-left: -0.4em;
+}
+img{
+    width: 100%;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.t-mini{
+    font-size: 0.8em;
+}
+.container{
+    padding: 0 20px;
+}
+#header{
+    display: none;
+    width: 375px;
+    height: auto;
+    position: fixed;
+    background-color: rgba(217, 217, 217, 0.3);
+    z-index: 999;
+    padding: 5px 0;
+    &.show{
+        display: block;
+    }
+}
+.site-title{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.split-container{
+    display: flex;
+}
+// .left-side,.right-side{
+//     @include mq-min(){
+//         width: calc( (100vw - 375px) / 2);
+//     }
+// }
+.left-side{
+    @include mq-min(){
+        width: calc( (100vw - 375px) * 3 / 4);
+    }
+}
+.right-side{
+    @include mq-min(){
+        width: calc( (100vw - 375px) / 4);
+    }
+}
+.insta-list{
+    display: flex;
+    flex-direction: row;
+    li{
+        width: calc(100% / 3);
+        list-style: none;
+        iframe{
+            width: 100%!important;
+        }
+    }
+}
+.center-side{
+    width: 100%;
+    min-height: 100vh;
+    @include mq-min(){
+        width: 375px;
+    }
+}
+#footer{
+    display: none;
+    width: 375px;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+}
+.ticket-link{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 131, 131);
+    font-size: 18px;
+    font-weight: 700;
+}

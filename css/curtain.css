@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.mv.appear .content {
+  animation-name: PageAnime-content;
+  animation-duration: 0.55s;
+  animation-delay: 0.55s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.animation .content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes PageAnime-content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.curtain .animation-bg, .curtain .animation-bg02 {
+  display: none;
+}
+
+.mv.appear.curtain .animation-bg, .mv.appear.curtain .animation-bg02 {
+  display: block;
+}
+
+.curtain .animation-bg, .curtain .animation-bg02 {
+  background: #ff97bd;
+  content: "";
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  transform: scaleX(1);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.curtain .animation-bg {
+  left: 50%;
+  animation-name: PageAnime-curtain01;
+}
+
+.curtain .animation-bg02 {
+  right: 50%;
+  animation-name: PageAnime-curtain02;
+}
+
+/* カーテン左 キーフレーム */
+@keyframes PageAnime-curtain01 {
+  0% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50% {
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+/* カーテン右 キーフレーム */
+@keyframes PageAnime-curtain02 {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  50% {
+    transform-origin: left;
+  }
+  100% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}

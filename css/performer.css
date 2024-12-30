@@ -1,0 +1,12 @@
+.card_modal {
+  margin: 50px auto;
+}
+.card_modal_inner .desc {
+  background: none;
+  border: none;
+}
+
+.card_modal_close {
+  display: flex;
+  justify-content: right;
+}
