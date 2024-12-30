@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             top: svElement.offsetTop,
             behavior: 'auto'
         });
-    }, 4500);
+    }, 4350);
     setTimeout(() => {
         const mvElement = document.querySelector('.mv');
         mvElement.style.display = 'none';
