@@ -61,7 +61,7 @@ li{
     margin-left: -0.4em;
 }
 img{
-    width: 100%;
+    max-width: 100%;
 }
 .pb10{
     padding-bottom: 10px;
@@ -140,7 +140,46 @@ img{
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 131, 131, 0.5);
-    font-size: 18px;
-    font-weight: 700;
+    background-color: rgba(255, 131, 131, 0.8);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    &._shiny {
+        position: relative;
+        overflow: hidden;
+        transition: 300ms;
+        &::before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: -180px;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background-color: rgba(255, 236, 131, 0.5);
+            transition: 300ms;
+            animation: shinyshiny 2.5s ease-in-out infinite;
+        }
+        
+        &:hover {
+            text-decoration: none;
+            box-shadow: none;
+        }
+    }
+    span{
+        display: inline-flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+        img{
+            width: 14px;
+            height: 14px;
+            margin-left: 0.5em;
+        }
+    }
+}
+
+@keyframes shinyshiny {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
 }
