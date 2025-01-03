@@ -94,14 +94,28 @@ swiper-slide {
     }
 }
 .performer{
+    swiper-slide{
+        display: block;
+        border: 1px solid #000;
+        border-radius: 8px;
+        background-color: #fff;
+    }
     &_content{
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            li{
-                width: 50%;
-            }
-        }
+        width: 80%;
+        margin: 0 auto;
+    }
+    &_image{
+        width: 80%;
+        margin: 1em auto;
+    }
+    &_link{
+        background: linear-gradient(90deg, #4C64D3, #CF2E92, #F26939, #FFDD83);
+        color: #fff!important;
+        margin-bottom: 1em;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        font-weight: 700;
     }
 }
 .movie{
