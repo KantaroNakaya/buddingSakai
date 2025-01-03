@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectName = document.querySelector('.project-name');
+    projectName.style.display = 'none';
     const text = projectName.textContent;
     projectName.textContent = '';
 
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectName.appendChild(span);
 
         setTimeout(() => {
+            projectName.style.display = 'inline';
             span.style.opacity = '1';
             span.style.transform = 'translateY(0)';
         }, 1500 + 100 * index);
