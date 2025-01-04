@@ -45,7 +45,7 @@ li {
 }
 @media screen and (min-width: 769px) {
   .sp {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -111,27 +111,49 @@ img {
 }
 
 @media screen and (min-width: 769px) {
-  .left-side {
-    width: calc((100vw - 375px) * 3 / 4);
+  .left-side, .right-side {
+    width: calc((100vw - 375px) / 2);
+    background-color: whitesmoke;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .right-side {
-    width: calc((100vw - 375px) / 4);
+  .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.insta-list {
+.pc-logo {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.pc-link {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 5px 0 #ca1c30;
 }
-.insta-list li {
-  width: 33.3333333333%;
-  list-style: none;
-}
-.insta-list li iframe {
-  width: 100% !important;
+.pc-link:hover {
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
 .center-side {
@@ -153,14 +175,17 @@ img {
   height: 80px;
 }
 
-.ticket-link {
+.footer-link {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 131, 131, 0.8);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-link {
+  background-color: rgba(255, 131, 131, 0.8);
 }
 .ticket-link._shiny {
   position: relative;
