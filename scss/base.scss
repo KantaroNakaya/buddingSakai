@@ -107,10 +107,14 @@ img{
     }
 }
 .pc-logo{
+    display: none;
     width: 60%;
     height: auto;
     margin:  auto;
     border-radius: 16px;
+    &.d-flex{
+        display: flex;
+    }
 }
 .right-side{
     @include mq-min(){
@@ -120,7 +124,8 @@ img{
     }
 }
 .pc-link{
-    display: flex;
+    // display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 80%;
@@ -133,6 +138,9 @@ img{
         box-shadow: none;
         transform: translateY(5px);
       }
+    &.d-flex{
+        display: flex;
+    }
 }
 
 

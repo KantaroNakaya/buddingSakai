@@ -126,10 +126,14 @@ img {
 }
 
 .pc-logo {
+  display: none;
   width: 60%;
   height: auto;
   margin: auto;
   border-radius: 16px;
+}
+.pc-logo.d-flex {
+  display: flex;
 }
 
 @media screen and (min-width: 769px) {
@@ -141,7 +145,7 @@ img {
 }
 
 .pc-link {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -154,6 +158,9 @@ img {
 .pc-link:hover {
   box-shadow: none;
   transform: translateY(5px);
+}
+.pc-link.d-flex {
+  display: flex;
 }
 
 .center-side {
